@@ -1,12 +1,8 @@
-# Node JS For Students
+# Bootstrap 5 - Discussion Project.
 
-some node JS related code for my students.
+Note : you can download a starter project from the following link. 
 
-# Express Projects - The Simple Stuff
-
-Inevitably we will be using one of the more advanced back end libraries like Next JS or Strapi, but for now, just the basic express stuff.
-
-1. [NodeJSHelloWorld](NodeJSHelloWorld) - Hello World with Node JS.
+[Bootstrap Starter Projects](https://github.com/Jay-study-nildana/FrontEndForStudents/tree/main/BootstrapForStudents/Bootstrap5#starter-projects)
 
 # Hire Me
 
