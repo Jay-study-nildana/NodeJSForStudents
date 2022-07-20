@@ -7,10 +7,11 @@ some node JS related code for my students.
 Inevitably we will be using one of the more advanced back end libraries like Next JS or Strapi, but for now, just the basic express stuff.
 
 1. [NodeJSHelloWorld](NodeJSHelloWorld) - Hello World with Node JS.
+1. [MongoDBHelloWorld](MongoDBHelloWorld) - Hello World with Mongo DB.
 
 # Hire Me
 
-I work as a full time freelance software developer and coding tutor. Hire me at [UpWork](https://www.upwork.com/fl/vijayasimhabr) or [Fiverr](https://www.fiverr.com/jay_codeguy). 
+I work as a full time freelance coding tutor. Hire me at [UpWork](https://www.upwork.com/fl/vijayasimhabr) or [Fiverr](https://www.fiverr.com/jay_codeguy). 
 
 # Hobbies
 
