@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Form With Bootstrap</title>
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
+</head>
+<body class="container">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>    
+    <main>
+        <h4>Simple Form with Bootstrap</h4>
+        <hr>
+        <div class="container-fluid">
+            <form action="/saveDataWithBS" method="post">
+                <p>Just testing this. blah</p>
+                <p>blah</p>
+                <hr>
+                <label for="fullname" class="form-label">full name:</label><br>
+                <input type="text" name="fullname" value="Bruce Wayne" class="form-control"><br>
+                <hr>
+                <label for="email" class="form-label">email:</label><br>
+                <input type="text" name="email" value="brucewayne@waynetech.com" class="form-control"><br><br>
+                <!-- <input type="submit" value="Submit"> -->
+                <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+            </form> 
+        </div>
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+    </main>
+</body>
+</html>
+
+
