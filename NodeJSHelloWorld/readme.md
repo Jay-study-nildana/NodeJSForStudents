@@ -29,6 +29,9 @@ Due to gitignore settings, i cannot include .env files here. So create one, with
     DEFAULT_PORT3 = "8082"
     DEFAULT_PORT4 = "8083"
 ```
+# postman collection
+
+i have included a postman collection for you to use. 
 
 # References
 
