@@ -48,8 +48,23 @@ class ExpressServer {
 
       this.server.post('/', (req, res, next) => {
         console.log(req);
-        // next()
+        res.send('post recieved.')
+        //next()
         });
+
+      this.server.post('/addtwonumbers', (req, res, next) => {
+        console.log(req.body);
+        let result = req.body.firstnumber + req.body.secondnumber;
+        console.log(result);
+        let responseobject = {
+          firstnumber : req.body.firstnumber,
+          secondnumber : req.body.secondnumber,
+          result : result
+        }
+        console.log(responseobject);
+        res.send(responseobject);
+        //next()
+        });        
   
       this.server.get('/', (req, res)=> {
         res.send('Hello World from EXPRESS SERVER!')
@@ -58,7 +73,7 @@ class ExpressServer {
 
     //Start Listening
     this.server.listen(this.port, () => {
-      console.log(`${this.serverName} Started at http://${this.hostname}:${this.port}/`);
+      console.log(`${this.serverName} API server Started at http://${this.hostname}:${this.port}/`);
     })
   }
 }
