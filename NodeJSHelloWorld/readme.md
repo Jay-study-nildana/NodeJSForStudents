@@ -5,6 +5,7 @@ Node JS Hello World.
 # Output
 
 ```
+    npm install
     npm run dev
 ```
 
@@ -16,6 +17,18 @@ note : you can modify the .env file to change port number. but please dont. keep
     1. http://localhost:8081/dummycar
 1. Output usually comes at http://localhost:8082/ - serve plain text
 1. Output usually comes at http://localhost:8083/ - serve bootstrap site
+
+# .env file
+
+Due to gitignore settings, i cannot include .env files here. So create one, with the following contents. 
+
+```
+    LOCAL_HOST = "localhost"
+    DEFAULT_PORT = "8080"
+    DEFAULT_PORT2 = "8081"
+    DEFAULT_PORT3 = "8082"
+    DEFAULT_PORT4 = "8083"
+```
 
 # References
 
