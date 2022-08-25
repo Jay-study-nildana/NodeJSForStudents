@@ -1,3 +1,3 @@
 {
-    "watch": ["src","views"]
+    "watch": ["src"]
 }

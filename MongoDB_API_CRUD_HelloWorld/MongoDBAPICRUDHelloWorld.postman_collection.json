@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "23816bfc-e792-4c83-b12e-ffe51451635e",
-		"name": "Mongo DB API CRUD Hello World",
+		"name": "MongoDBAPICRUDHelloWorld",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "9430666"
 	},
@@ -143,6 +143,61 @@
 					],
 					"path": [
 						"addHeroWithPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchformovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"termone\":\"bollywood\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}mongodb/searchformovie",
+					"host": [
+						"{{host}}mongodb"
+					],
+					"path": [
+						"searchformovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "returnsomemovies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"termone\":\"batman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}mongodb/returnsomemovies",
+					"host": [
+						"{{host}}mongodb"
+					],
+					"path": [
+						"returnsomemovies"
 					]
 				}
 			},
