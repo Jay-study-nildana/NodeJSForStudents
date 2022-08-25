@@ -4,6 +4,7 @@ import bodyParser from "body-parser"; //ES 6
 import path from "path"; //for loading files from a path. serve bootstrap site for example.
 import lodash, { some } from "lodash";
 import { MongoClient } from "mongodb";
+import cors from "cors";
 
 /**
  *  Example of using ES6 syntectic sugar to create Express JS server
@@ -38,6 +39,9 @@ class ExpressServer {
   initServer = () => {
     //Create Server
     this.server = express()
+
+    //setup cors
+    this.server.use(cors());
 
     //setup the view engine. for showing views on the website
     //by default, ejs is looking for a folder called 'views' in the root of the folder

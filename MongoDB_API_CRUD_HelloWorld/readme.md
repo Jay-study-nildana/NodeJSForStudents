@@ -20,6 +20,23 @@ You must create a .env file which looks like this. Note that this project uses b
     connectionstring = "mongodb://localhost:27017"
 ```
 
+# Cross-Origin Request Blocked
+
+You will hundred percent get this error as I am asking you to run both the React JS project and the Mongo DB API Server on the same computer : localhost. 
+
+So, make your sure your API server has cors configured.
+
+```
+    npm install cors
+```
+
+then, enable it. 
+
+```
+    //setup cors
+    this.server.use(cors());
+```
+
 # Output - mongo db API
 
 1. http://localhost:8081/mongodb/helloworld - get all the list of super heroes.
@@ -50,6 +67,7 @@ This API server uses both locally running mongo db. And alos mongo db on mongo c
 1. https://hevodata.com/learn/node-js-with-mongodb-crud/
 1. https://www.mongodb.com/docs/compass/current/embedded-shell/
 1. https://www.postman.com/downloads/
+1. https://github.com/expressjs/cors
 
 # errors
 
