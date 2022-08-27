@@ -367,6 +367,64 @@ class ExpressServer {
       run().catch(console.dir);
     })
 
+    this.server.get('/mongodb/returnsomemovieswithoutindexing', (req, res) => {
+      async function run() {
+        let cl = new MongoClient(cloudconnectionstring2);
+        try {
+          await cl.connect();
+          const dbs = cl.db("sample_mflix");
+          const coll = dbs.collection("movies");
+          // query for movies that have a runtime less than
+          const query = { runtime: { $lt: 100 } };
+          const options = {
+
+            // sort returned documents in ascending order by title (A->Z)
+
+            sort: { title: 1 },
+
+            // Include only the `title` and `imdb` fields in each returned document
+
+            projection: { _id: 0, title: 1, imdb: 1 },
+
+          };
+          let numberOfMovies = 10;
+          //let resultOfDb = coll.find(query, options).limit(numberOfMovies);
+          let resultOfDb = coll.find({}, {}).limit(numberOfMovies);
+          // print a message if no documents were found
+
+          if ((await resultOfDb.count()) === 0) {
+
+            console.log("No documents found!");
+
+          }
+
+          // replace console.dir with your callback to access individual elements
+
+          let responseObject = {
+            movies: []
+          }
+
+          await resultOfDb.forEach(function (x) {
+            responseObject.movies.push(x);
+          });
+
+          console.log(responseObject);
+
+          res.send(responseObject);
+
+          // await resultOfDb.forEach(console.dir);
+
+        } catch (err) {
+          console.warn("ERROR: " + err);
+          if (errCallback) errCallback(err);
+        } finally {
+          await cl.close();
+        }
+      }
+      run().catch(console.dir);
+    })    
+
+    //note : you need to enable 'indexes' for this to work. 
     this.server.get('/mongodb/returnsomemovies', (req, res) => {
       async function run() {
         let cl = new MongoClient(cloudconnectionstring2);
@@ -423,6 +481,7 @@ class ExpressServer {
       run().catch(console.dir);
     })
 
+    //note : you need to enable 'indexes' for this to work. 
     this.server.post('/mongodb/searchformovie', (req, res) => {
       let searchterms = {
         termone: req.body.termone

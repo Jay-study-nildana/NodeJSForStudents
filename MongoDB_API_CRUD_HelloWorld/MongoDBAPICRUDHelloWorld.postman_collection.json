@@ -204,6 +204,35 @@
 			"response": []
 		},
 		{
+			"name": "returnsomemovieswithoutindexing",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"termone\":\"batman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}mongodb/returnsomemovieswithoutindexing",
+					"host": [
+						"{{host}}mongodb"
+					],
+					"path": [
+						"returnsomemovieswithoutindexing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "mongodb/updateheroWithPost",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
