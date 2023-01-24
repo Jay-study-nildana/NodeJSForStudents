@@ -1,17 +1,20 @@
-# Node JS For Students
+# react js front end app
 
-some node JS related code for my students.
+This is the front end app that works with the available back end web api. I simply took the auth0 react sample as it is, and made my own remixes.
 
-# Express Projects - The Simple Stuff
+read the original read me from [Auth0 here](READMEOriginal.md).
 
-Inevitably we will be using one of the more advanced back end libraries like Next JS or Strapi, but for now, just the basic express stuff.
+# auth_config.json
 
-1. [NodeJSHelloWorld](NodeJSHelloWorld) - Hello World with Node JS.
-1. [MongoDBHelloWorld](MongoDBHelloWorld) - Hello World with Mongo DB.
-1. [MongoDB_API_CRUD_HelloWorld](MongoDB_API_CRUD_HelloWorld) - Hello World with Mongo DB plus API Server.
-1. [MovieDBwebapi](MovieDBwebapi) - a web api that consumes movie db web api.
-1. [Auth0 Full Stack Demo](Auth0Demo) - a simple full stack, back end and front end, 2 projects, demo with basic token social login.
+you need to create a file called, 'auth_config.json', in the 'src' folder, and fill it with these detailsf from your Auth0 app.
 
+```
+{
+  "domain": "",
+  "clientId": "",
+  "audience": ""
+}
+```
 # Hire Me
 
 I work as a full time freelance coding tutor. Hire me at [UpWork](https://www.upwork.com/fl/vijayasimhabr) or [Fiverr](https://www.fiverr.com/jay_codeguy). 

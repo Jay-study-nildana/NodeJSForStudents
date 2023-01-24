@@ -1,16 +1,11 @@
-# Node JS For Students
+# Auth0 Full Stack Demo
 
-some node JS related code for my students.
+a simple full stack, back end and front end, 2 projects, demo with basic token social login.
 
-# Express Projects - The Simple Stuff
+# projects
 
-Inevitably we will be using one of the more advanced back end libraries like Next JS or Strapi, but for now, just the basic express stuff.
-
-1. [NodeJSHelloWorld](NodeJSHelloWorld) - Hello World with Node JS.
-1. [MongoDBHelloWorld](MongoDBHelloWorld) - Hello World with Mongo DB.
-1. [MongoDB_API_CRUD_HelloWorld](MongoDB_API_CRUD_HelloWorld) - Hello World with Mongo DB plus API Server.
-1. [MovieDBwebapi](MovieDBwebapi) - a web api that consumes movie db web api.
-1. [Auth0 Full Stack Demo](Auth0Demo) - a simple full stack, back end and front end, 2 projects, demo with basic token social login.
+1. [back end web api](webapi)
+1. [front end react js](reactjsapp)
 
 # Hire Me
 
