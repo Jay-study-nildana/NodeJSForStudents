@@ -1,7 +1,7 @@
 {
-  "name": "mongodb_api_crud_helloworld",
+  "name": "moviedbwebapi",
   "version": "1.0.0",
-  "description": "mongo db api crud",
+  "description": "a web api that consumes movie db web api",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,21 +10,22 @@
     "restart": "rimraf dist && npm run start",
     "dev": "nodemon --exec npm run restart"
   },
+  "keywords": [
+    "web",
+    "api"
+  ],
   "author": "jay",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.1",
-    "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "lodash": "^4.17.21",
-    "mongodb": "^4.8.0"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.18.9",
-    "@babel/core": "^7.18.9",
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
-    "@babel/preset-env": "^7.18.9",
-    "nodemon": "^2.0.19",
-    "rimraf": "^3.0.2"
+    "@babel/preset-env": "^7.20.2",
+    "nodemon": "^2.0.20",
+    "rimraf": "^4.1.1"
   }
 }

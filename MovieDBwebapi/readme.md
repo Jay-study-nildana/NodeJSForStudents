@@ -1,15 +1,55 @@
-# Node JS For Students
+# movie db web api
 
-some node JS related code for my students.
+a web api that consumes movie db web api.
 
-# Express Projects - The Simple Stuff
+# other stuff
 
-Inevitably we will be using one of the more advanced back end libraries like Next JS or Strapi, but for now, just the basic express stuff.
+1. for a front end only implementation, look at, this. https://github.com/Jay-study-nildana/FrontEndForStudents/tree/main/BootstrapForStudents/Bootstrap5/MovieDBProject
 
-1. [NodeJSHelloWorld](NodeJSHelloWorld) - Hello World with Node JS.
-1. [MongoDBHelloWorld](MongoDBHelloWorld) - Hello World with Mongo DB.
-1. [MongoDB_API_CRUD_HelloWorld](MongoDB_API_CRUD_HelloWorld) - Hello World with Mongo DB plus API Server.
-1. [MovieDBwebapi](MovieDBwebapi) - a web api that consumes movie db web api.
+# .env file
+
+You must create a .env file which looks like this. 
+
+```
+    LOCAL_HOST = "localhost"
+    DEFAULT_PORT = "8080"
+    apikey = "YOURMOVIEDBAPIKEY"
+```
+
+# API documentation
+
+1. http://localhost:8080/randomstuff
+    
+    example output : 
+
+    ```
+        {
+        "name": "Jay",
+        "nameFull": "Vijayasimha BR",
+        "place": "Mysore",
+        "numberFavorite": "69"
+        }
+
+    ```
+1. http://localhost:8080/randommovie
+    
+    example output : 
+
+    ```
+        {
+        "id": 475557,
+        "original_title": "Joker",
+        "vote_count": 22035,
+        "overview": "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure."
+        }
+        
+    ```
+
+# references
+
+1. https://dmitripavlutin.com/javascript-fetch-async-await/
+1. https://stackoverflow.com/questions/48708449/promise-pending-why-is-it-still-pending-how-can-i-fix-this
+1. https://stackoverflow.com/questions/54950838/how-to-use-fetch-with-async-await
 
 # Hire Me
 

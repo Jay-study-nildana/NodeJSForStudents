@@ -2,40 +2,15 @@
 
 Mongo DB API CRUD Hello World
 
-note : remember to have Postman installed. I have included a Postman collection in the repo. 
+Note : if a package is missing, just install the missing package. 
 
-note : learn how to use the mongodb db driver for node js, here : https://www.mongodb.com/docs/drivers/node/current/
-
-# .env file
-
-You must create a .env file which looks like this. Note that this project uses both localhost and cloud mongo db databases. make sure both are ready. 
+For example.
 
 ```
-    LOCAL_HOST = "localhost"
-    DEFAULT_PORT = "8080"
-    DEFAULT_PORT2 = "8081"
-    DEFAULT_PORT3 = "8082"
-    DEFAULT_PORT4 = "8083"
-    cloudconnectionstring = "mongodb+srv://username:password@cluster0.s6bfyhr.mongodb.net"
-    connectionstring = "mongodb://localhost:27017"
+    npm install ejs
 ```
 
-# Cross-Origin Request Blocked
-
-You will hundred percent get this error as I am asking you to run both the React JS project and the Mongo DB API Server on the same computer : localhost. 
-
-So, make your sure your API server has cors configured.
-
-```
-    npm install cors
-```
-
-then, enable it. 
-
-```
-    //setup cors
-    this.server.use(cors());
-```
+Note : remember to have Postman installed. I have included a Postman collection in the repo. 
 
 # Output - mongo db API
 
@@ -45,21 +20,27 @@ then, enable it.
 1. http://localhost:8081/mongodb/addherogreenlantern - for a quick add/delete combo. 
 1. check even more endpoints in the included Postman collection. 
 
+# Output - even more stuff
+
+1. http://localhost:8081/ - a simple form without bootstrap. 
+1. http://localhost:8081/about - simple about page
+1. http://localhost:8081/SampleFormWithBS - simple form with bootstrap.
+1. http://localhost:8081/dummycar - a simple json object without any lodash
+1. http://localhost:8081/dummycarwithlodash - json with lodash.
+
 # Output - basics
 
 ```
     npm run dev
 ```
 
-# connection string
+note : you can modify the .env file to change port number. but please dont. keep it default and simple.
 
-This API server uses both locally running mongo db. And alos mongo db on mongo cloud. 
-
-# References : mongodb driver for nodejs
-
-1. https://www.mongodb.com/docs/drivers/node/current/usage-examples/findOne/
-1. https://www.mongodb.com/docs/drivers/node/current/fundamentals/indexes/#text-indexes
-1. https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/read-operations/cursor/
+1. http://localhost:8081/ - a simple form without bootstrap. 
+1. http://localhost:8081/about - simple about page
+1. http://localhost:8081/SampleFormWithBS - simple form with bootstrap.
+1. http://localhost:8081/dummycar - a simple json object without any lodash
+1. http://localhost:8081/dummycarwithlodash - json with lodash.
 
 # References
 
@@ -67,17 +48,6 @@ This API server uses both locally running mongo db. And alos mongo db on mongo c
 1. https://hevodata.com/learn/node-js-with-mongodb-crud/
 1. https://www.mongodb.com/docs/compass/current/embedded-shell/
 1. https://www.postman.com/downloads/
-1. https://github.com/expressjs/cors
-
-# errors
-
-Note : if a package is missing, just install the missing package. 
-
-For example.
-
-```
-    npm install ejs
-```
 
 # Hire Me
 
