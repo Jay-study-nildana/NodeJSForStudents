@@ -36,6 +36,17 @@ class ExpressServer {
         // next()
       })
 
+      //get endpoint for batman
+
+      this.server.get('/batman', (req, res)=> {
+        const batman = {
+          "name" : "Batman",
+          "realname" : "Bruce Wayne"
+        }
+        res.send(batman)
+        // next()
+      })
+
       this.server.put('/user', (req, res)=> {
         res.send('Got a PUT request at /user')
         // next()
@@ -50,6 +61,36 @@ class ExpressServer {
         console.log(req);
         // next()
         });
+
+      //post endpoint for batman
+
+      this.server.post('/postexample', (req, res) => {
+        //console.log(req);
+        console.log(req.body);
+
+        const responseObject = {
+          "msg" : "Got a POST request at /postexample",
+          "body" : req.body
+        }
+
+        res.send(responseObject);
+        });
+
+        //post to add two numbers
+
+        this.server.post('/add', (req, res) => {
+          //console.log(req);
+          console.log(req.body);
+
+          const responseObject = {
+
+            "msg" : "Got a POST request at /add",
+            "body" : req.body,
+            "result" : req.body.num1 + req.body.num2
+          }
+
+          res.send(responseObject);
+          });
   
       this.server.get('/', (req, res)=> {
         res.send('Hello World from EXPRESS SERVER!')
