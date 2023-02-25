@@ -8,8 +8,9 @@ import { MongoClient } from "mongodb";
 /**
  *  Example of using ES6 syntectic sugar to create Express JS server
  */
-
-let connectionstring = 'mongodb://localhost:27017';
+//mongodb+srv://monkey:3ClVr3J5HLsuu9w7@cluster0.cckieyd.mongodb.net
+let connectionstring = 'mongodb+srv://monkey:3ClVr3J5HLsuu9w7@cluster0.cckieyd.mongodb.net';
+//let connectionstring = 'mongodb://localhost:27017';
 
 class ExpressServer {
   constructor(hostname =process.env.LOCAL_HOST, port= process.env.DEFAULT_PORT2) {
@@ -354,7 +355,7 @@ class ExpressServer {
         run().catch(console.dir);       
       }) 
 
-      this.server.get('/mongodb/updateheroWithPost', (req, res)=> {
+      this.server.post('/mongodb/updateheroWithPost', (req, res)=> {
 
         let tempHero = {
           hero : req.body.hero,

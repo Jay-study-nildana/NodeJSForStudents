@@ -12,6 +12,44 @@ For example.
 
 Note : remember to have Postman installed. I have included a Postman collection in the repo. 
 
+# things to do before running this
+
+1. get the .env file ready.
+1. get your mongo db, preferably, the cloud db, ready.
+1. connect with mongo db compass and confirm credentials.
+1. in the project, update connection string, "let connectionstring = 'mongodb://localhost:27017';"
+1. npm install
+
+if all goes as planned, try this endpoint.
+
+http://localhost:8081/mongodb/addhero
+
+```
+    {
+        "resultOfDb": {
+            "acknowledged": true,
+            "insertedId": "63fa168e00821f279bd65d32"
+        }
+    }
+```
+
+# .env file
+
+You must create a .env file which looks like this. 
+
+```
+    LOCAL_HOST = "localhost"
+    DEFAULT_PORT = "8080"
+    DEFAULT_PORT2 = "8081"
+    DEFAULT_PORT3 = "8082"
+    DEFAULT_PORT4 = "8083"
+```
+
+# endpoints
+
+1. http://localhost:8081/mongodb/addhero
+1. http://localhost:8081/mongodb/addherogreenlantern
+
 # Output - mongo db API
 
 1. http://localhost:8081/mongodb/helloworld - get all the list of super heroes.
