@@ -492,6 +492,68 @@ class ExpressServer {
     }//end of delete endpoint
     );
 
+    this.server.post('/deletespecificherowithnameofhero', (req, res) => {
+
+      //first step is get the id from the body
+
+      console.log(req.body);
+
+      let tempHeroName = req.body.hero;
+
+      console.log(tempHeroName);
+
+      async function run() {
+
+        console.log(`async deletespecificherowithnameofhero has started`);
+
+        let cl = new MongoClient(connectionstring);
+
+        try {
+
+          console.log(`about to try connect`);
+
+          await cl.connect();
+
+          //we need to get the database
+
+          let db = cl.db("superheroes");
+
+          //we need to get the collection or table
+
+          let collection = db.collection("heroes");
+
+          let resultOfDelete = await collection.deleteOne(
+            {
+              "hero": tempHeroName
+            });
+
+          console.log(resultOfDelete);
+
+          //response object
+
+          const responseObject = {
+
+            "msg": "Got a POST request at /deletespecificherowithnameofhero",
+
+            "result": resultOfDelete
+
+          }
+
+          //res.status(500).json(resultOBject)
+          res.send(responseObject);
+        }//end of try
+        catch (err) {
+          console.log(`error in try connect`);
+          console.log(err);
+        } //end of catch
+
+      } //end of run
+
+      run().catch(console.dir);
+
+    }//end of delete endpoint
+    );
+
 
     //Start Listening
     this.server.listen(this.port, (error) => {
