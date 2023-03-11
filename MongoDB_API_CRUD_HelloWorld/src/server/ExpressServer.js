@@ -4,6 +4,8 @@ import bodyParser from "body-parser"; //ES 6
 import path from "path"; //for loading files from a path. serve bootstrap site for example.
 import lodash, { some } from "lodash";
 import { MongoClient, ObjectId } from "mongodb";
+// import cors
+import cors from "cors";
 
 /**
  *  Example of using ES6 syntectic sugar to create Express JS server
@@ -40,6 +42,9 @@ class ExpressServer {
     this.server.use(bodyParser.json());
     // for parsing application/x-www-form-urlencoded - form data
     this.server.use(bodyParser.urlencoded({ extended: true }));
+
+    //use cors
+    this.server.use(cors());
 
     // this.server.get('/user', (req, res)=> {
     //   res.send('Got a GET request at /user')
@@ -321,6 +326,26 @@ class ExpressServer {
       }
       run().catch(console.dir);
     })
+
+    //post method
+
+    this.server.post('/returnname', (req, res) => {
+      console.log('post method')
+      console.log(req.body);
+
+      let receivedName = req.body.termone;
+      let sentence = `Hello ${receivedName}!`;
+
+      let responseObject = {
+        sentence: sentence,
+        receivedName: receivedName
+      }
+
+      console.log(responseObject)
+      res.send(responseObject);
+    })
+
+
 
     this.server.post('/mongodb/addHeroWithPost', (req, res) => {
       let tempHero = {
