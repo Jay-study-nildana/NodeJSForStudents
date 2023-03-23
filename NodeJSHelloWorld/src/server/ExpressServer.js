@@ -1,5 +1,7 @@
 import express from "express"
 const bodyParser = require('body-parser');
+// import cors
+import cors from "cors";
 
 /**
  *  Example of using ES6 syntectic sugar to create Express JS server
@@ -21,6 +23,9 @@ class ExpressServer {
 
       this.server.use(bodyParser.json()); // for parsing application/json
       this.server.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
+      // use cors
+      this.server.use(cors());
 
       this.server.get('/user', (req, res)=> {
         res.send('Got a GET request at /user')
