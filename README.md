@@ -11,6 +11,8 @@ Inevitably we will be using one of the more advanced back end libraries like Nex
 1. [MongoDB_API_CRUD_HelloWorld](MongoDB_API_CRUD_HelloWorld) - Hello World with Mongo DB plus API Server.
 1. [MovieDBwebapi](MovieDBwebapi) - a web api that consumes movie db web api.
 1. [Auth0 Full Stack Demo](Auth0Demo) - a simple full stack, back end and front end, 2 projects, demo with basic token social login.
+2. [NodeJSHelloWorldwithVercel](https://github.com/Jay-study-nildana/vercelbackenddemo) - Hello World with Node JS with Vercel Deployment.
+3. [NodeJSHelloWorldwithAzureGitHubActions](https://github.com/Jay-study-nildana/GitHubActionsNodeJS) - Hello World with Node JS with Azure Deployment.
 
 # Hire Me
 
