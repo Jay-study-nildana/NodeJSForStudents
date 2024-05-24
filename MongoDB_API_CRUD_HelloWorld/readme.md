@@ -87,15 +87,9 @@ note : you can modify the .env file to change port number. but please dont. keep
 1. https://www.mongodb.com/docs/compass/current/embedded-shell/
 1. https://www.postman.com/downloads/
 
-# Hire Me
+# hire and get to know me
 
-I work as a full time freelance coding tutor. Hire me at [UpWork](https://www.upwork.com/fl/vijayasimhabr) or [Fiverr](https://www.fiverr.com/jay_codeguy). 
+find ways to hire me, follow me and stay in touch with me.
 
-# Stay in touch
-
-1. Jay's [Developer Profile](https://jay-study-nildana.github.io/developerprofile)
-1. Jay's [Personal Site](https://stories.thechalakas.com/)
-
-# General Note
-
-This code is provided as is without any warranties. It's primarily meant for my own personal use, and to make it easy for me share code with my students. Feel free to use this code as it pleases you.
+1. https://jay-study-nildana.github.io/developerprofile/
+1. https://thechalakas.com
